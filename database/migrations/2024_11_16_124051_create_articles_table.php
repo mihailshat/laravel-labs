@@ -16,7 +16,7 @@ return new class extends Migration
             $table->date('date')->default(10-10-2024);
             $table->string('name');
             $table->string('desc')->nullable();
-            $table->foreignId();
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
