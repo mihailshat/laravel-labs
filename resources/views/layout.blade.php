@@ -31,7 +31,7 @@
           <a class="nav-link active" aria-current="page" href="/about">О нас</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Контакты</a>
+          <a class="nav-link" href="/contacts">Контакты</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +45,9 @@
           </ul>
         </li> -->
       </ul>
-      <a href="/auth/signup" class="btn btn-outline-success">SignUp</a>
+      <a href="/auth/signup" class="btn btn-outline-success me-3">SignUp</a>
+      <a href="/auth/login" class="btn btn-outline-success me-3">SignIn</a>
+      <a href="/auth/logout" class="btn btn-outline-success">Logout</a>
     </div>
   </div>
 </nav>
