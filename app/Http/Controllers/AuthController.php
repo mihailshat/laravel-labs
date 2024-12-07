@@ -29,12 +29,11 @@ class AuthController extends Controller
         $user = User::create([
             'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>Hash::make($request->password)
-
+            'password'=>Hash::make($request->password),
+            'role'=>'reader',
         ]);
-        $user->remember_token=$user->createToken('MyAppToken')->plainTextToken;
+        $user->remember_token = $user->createToken('MyAppToken')->plainTextToken;
         $user->save();
-
         return redirect()->route('login');
     }
 
@@ -47,7 +46,7 @@ class AuthController extends Controller
         $credentials = $request->validate([
             'email'=>'required|email',
             'password'=>'required|min:6|max:10'
-        ]);
+        ]); 
         if(Auth::attempt($credentials, $request->remember))
         {
             $request->session()->regenerate();
