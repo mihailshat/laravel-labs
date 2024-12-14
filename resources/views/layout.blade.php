@@ -15,21 +15,21 @@
     <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <a class="navbar-brand" href="/">НавБар</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/article">Articles</a>
+          <a class="nav-link active" aria-current="page" href="/article">Статьи</a>
       </li>
       @can('create')
       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/article/create">Create article</a>
+          <a class="nav-link active" aria-current="page" href="/article/create">Создать статью</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/comment/index">All comments</a>
+          <a class="nav-link active" aria-current="page" href="/comment/index">Все Комментарии</a>
       </li>
       @endcan
         <li class="nav-item">
@@ -41,7 +41,7 @@
         @auth
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Notifications {{auth()->user()->unreadNotifications->count()}}
+            Уведомления {{auth()->user()->unreadNotifications->count()}}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             @foreach(auth()->user()->unreadNotifications as $notification)
@@ -52,11 +52,11 @@
         @endauth
       </ul>
       @guest
-      <a href="/auth/signup" class="btn btn-outline-success me-3">SignUp</a>
-      <a href="/auth/login" class="btn btn-outline-success me-3">SignIn</a>
+      <a href="/auth/signup" class="btn btn-outline-success me-3">Регистрация</a>
+      <a href="/auth/login" class="btn btn-outline-success me-3">Вход</a>
       @endguest
       @auth
-      <a href="/auth/logout" class="btn btn-outline-success">Logout</a>
+      <a href="/auth/logout" class="btn btn-outline-success">Выход</a>
       @endauth
 
     </div>
