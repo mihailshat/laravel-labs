@@ -77,7 +77,7 @@ class CommentController extends Controller
         $comment = Comment::findOrFail($id);
         Gate::authorize('update_comment', $comment);
         $comment->delete();
-        return redirect()->route('article.show', ['article'=>$comment->article_id])->with('status','Delete success');
+        return redirect()->route('article.show', ['article'=>$comment->article_id])->with('status','Успешно удалено');
     }
 
     public function accept(Comment $comment){
